@@ -76,11 +76,11 @@ end
 action_class do
   def pre_install
     # Install the desktop environment and the desktop manager packages
-    execute 'Install gnome desktop' do
-      command 'yum -y install @gnome'
-      retries 3
-      retry_delay 5
-    end
+    # execute 'Install gnome desktop' do
+    #   command 'yum -y install @gnome'
+    #   retries 3
+    #   retry_delay 5
+    # end
     # Install X Window System (required when using GPU acceleration)
     package "xorg-x11-server-Xorg" do
       retries 3
